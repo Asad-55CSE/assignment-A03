@@ -132,7 +132,7 @@ body {
 }
 
 .job-card:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-top {
@@ -248,4 +248,44 @@ body {
 .btn-rejected.active {
     background-color: #e74c3c;
     color: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state.hidden {
+    display: none;
+}
+
+.empty-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.empty-sub {
+    color: gray;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    #cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

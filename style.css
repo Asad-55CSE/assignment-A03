@@ -168,3 +168,84 @@ body {
 .delete-btn:hover {
     color: #e74c3c;
 }
+
+.job-info {
+    font-size: 12px;
+    color: #888;
+    margin: 8px 0;
+}
+
+.job-info span {
+    margin-right: 8px;
+}
+
+.status-text {
+    font-size: 12px;
+    color: #aaa;
+    margin: 6px 0;
+}
+
+.status-text.interview {
+    color: green;
+    font-weight: bold;
+}
+
+.status-text.rejected {
+    color: red;
+    font-weight: bold;
+}
+
+.job-desc {
+    font-size: 13px;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-interview {
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #4a90d9;
+    background-color: white;
+    color: #4a90d9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-interview:hover {
+    background-color: #4a90d9;
+    color: white;
+}
+
+.btn-interview.active {
+    background-color: #4a90d9;
+    color: white;
+}
+
+.btn-rejected {
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #e74c3c;
+    background-color: white;
+    color: #e74c3c;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-rejected:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-rejected.active {
+    background-color: #e74c3c;
+    color: white;
+}

@@ -183,7 +183,7 @@ function showCards() {
                     <p class="job-desc">` + job.description + `</p>
 
                     <div class="card-buttons">
-                        <button class="btn-interview ` + interviewActive + `" onclick="markInterview(` + job.id + `)">interview</button>
+                        <button class="btn-interview ` + interviewActive + `" onclick="markInterview(` + job.id + `)">Interview</button>
                         <button class="btn-rejected ` + rejectedActive + `" onclick="markRejected(` + job.id + `)">Rejected</button>
                     </div>
                 </div>

@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-box-total {
+    background-color: #e8f4fd;
+}
+
+.stat-box-interview {
+    background-color: #e8f9f0;
+}
+
+.stat-box-rejected {
+    background-color: #fdecea;
+}
+
+.stat-box h1 {
+    margin: 5px 0 0 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.count-interview {
+    color: green;
+}
+
+.count-rejected {
+    color: red;
+}
+
+.stat-label {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}

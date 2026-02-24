@@ -80,7 +80,7 @@ var jobs = [
         status: "Not Applied"
     },
     {
-        id: 1,
+        id: 9,
         company: "Mobile First Corp",
         position: "React Native Developer",
         location: "Remote",
@@ -192,4 +192,44 @@ function showCards() {
             container.innerHTML = container.innerHTML + cardHTML;
         }
     }
+}
+
+function markInterview(id) {
+    for (var i = 0; i < jobs.length; i++) {
+        if (jobs[i].id == id) {
+            if (jobs[i].status == "Interview") {
+                jobs[i].status = "Not Applied";
+            } else {
+                jobs[i].status = "Interview";
+            }
+        }
+    }
+    showCards();
+    updateCounts();
+}
+
+function markRejected(id) {
+    for (var i = 0; i < jobs.length; i++) {
+        if (jobs[i].id == id) {
+            if (jobs[i].status == "Rejected") {
+                jobs[i].status = "Not Applied";
+            } else {
+                jobs[i].status = "Rejected";
+            }
+        }
+    }
+    showCards();
+    updateCounts();
+}
+
+function deleteJob(id) {
+    var newJobs = [];
+    for (var i = 0; i < jobs.length; i++) {
+        if (jobs[i].id != id) {
+            newJobs.push(jobs[i]);
+        }
+    }
+    jobs = newJobs;
+    showCards();
+    updateCounts();
 }

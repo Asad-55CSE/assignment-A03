@@ -233,3 +233,32 @@ function deleteJob(id) {
     showCards();
     updateCounts();
 }
+
+function switchTab(tabName) {
+    currentTab = tabName;
+    document.getElementById("tab-All").classList.remove("active-tab");
+    document.getElementById("tab-Interview").classList.remove("active-tab");
+    document.getElementById("tab-Rejected").classList.remove("active-tab");
+    document.getElementById("tab-" + tabName).classList.add("active-tab");
+
+    showCards();
+}
+
+function updateCounts() {
+    var totalCount = jobs.length;
+    var interviewCount = 0;
+    var rejectedCount = 0;
+
+    for (var i = 0; i < jobs.length; i++) {
+        if (jobs[i].status == "Interview") {
+            interviewCount++;
+        }
+        if (jobs[i].status == "Rejected") {
+            rejectedCount++;
+        }
+    }
+
+    document.getElementById("total-count").innerText = totalCount;
+    document.getElementById("interview-count").innerText = interviewCount;
+    document.getElementById("rejected-count").innerText = rejectedCount;
+}
